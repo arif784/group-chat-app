@@ -29,6 +29,8 @@ npm start
 
 open http://localhost:5000 in your browser, you should see:
 
+![Home Page](https://github.com/arif784/group-chat-app/blob/main/assets/Screenshot%202022-03-05%20220440.png?raw=true)
+
 ## License
 
 [MIT](LICENSE)
