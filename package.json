@@ -1,0 +1,30 @@
+{
+  "name": "group-chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arif784/group-chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arif784/group-chat-app/issues"
+  },
+  "homepage": "https://github.com/arif784/group-chat-app#readme",
+  "dependencies": {
+    "@socket.io/cluster-adapter": "^0.1.0",
+    "@socket.io/sticky": "^1.0.1",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.4",
+    "socket.io": "^4.4.1",
+    "winston": "^3.6.0"
+  }
+}

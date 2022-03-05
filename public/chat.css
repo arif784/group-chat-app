@@ -1,0 +1,164 @@
+.left-pane {
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 600;
+    height: 100vh;
+}
+
+.modal-header {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.right-pane {
+    height: 100vh;
+}
+
+.user {
+    margin-top: 2rem;
+}
+
+.logout {
+    float: right;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+}
+
+.add-action {
+    float: right;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.group,
+.direct {
+    margin-top: 3rem;
+}
+
+.msg-box {
+    /* width: 80%; */
+}
+
+.chat-header {
+    height: 10vh;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12rem;
+    padding-top: 0.5rem;
+}
+
+#memberDropDown {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#member-span {
+    display: none;
+}
+
+.chat-body {
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.chat-footer {
+    height: 10vh;
+    display: flex;
+    width: 100%;
+}
+
+#channel-list {
+    list-style: none;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+
+.channel-item {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#room-list {
+    list-style: none;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+
+.room-user {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-item {
+    /* margin-top: 1rem; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    /* background: lightgray; */
+    border-bottom: 1px solid lightgray;
+    font-size: larger;
+}
+
+.room-item:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+#room-users {
+    list-style: none;
+    padding: 0;
+}
+
+.action-list {
+    list-style: none;
+    border: 1px solid lightgray;
+    color: white;
+}
+
+.dropdown-menu {
+    color: #333;
+}
+
+.action-item {
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.action-item:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+#channel-users {
+    padding: 0;
+    list-style: none;
+    font-size: larger;
+}
+
+.user-list {
+    padding: 1rem;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.user-list:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+#chat-list {
+    padding: 0;
+    list-style: none;
+}
+
+#chat-list li {
+    padding: 1rem;
+    border-bottom: 1px solid lightgray;
+    font-size: initial;
+}

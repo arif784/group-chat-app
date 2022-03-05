@@ -1,0 +1,18 @@
+.home {
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 700;
+}
+
+.wel-msg {
+    font-size: xx-large;
+    margin-top: 3rem;
+}
+
+.join {
+    margin-top: 3rem;
+    font-size: x-large;
+}

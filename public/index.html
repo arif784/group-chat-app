@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Group Chat App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Modal -->
+        <div class="modal fade" id="join" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New User</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="login-username" placeholder="Enter your username">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="join-btn">Join</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row home">
+            <div class="col-lg-12">
+                <div class="wel-msg">Welcome to Group Chat</div>
+                <div class="join"><button class="btn btn-primary" data-toggle="modal" data-target="#join">Join</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

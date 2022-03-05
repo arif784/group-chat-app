@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Group Chat App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="chat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Modal -->
+        <div class="modal fade" id="add-member" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Members</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="channel-users"></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="add-members">Add</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="channel" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New Channel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" placeholder="Enter channel name here" id="channel-name" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="create-channel">Create</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="direct" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Direct Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="room-users"></ul>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 left-pane">
+                <div class="user">
+                    <span id="username"></span>
+                    <span class="logout"><a href="/">Logout</a></span>
+                </div>
+                <div class="group">
+                    <div>
+                        <span>CHANNEL</span>
+                        <span class="add-action" data-toggle="modal" title="Add" data-target="#channel">+</span>
+                    </div>
+                    <div>
+                        <ul id="channel-list"></ul>
+                    </div>
+                </div>
+                <div class="direct">
+                    <div>
+                        <span>DIRECT MESSAGE</span>
+                        <span id="add-room" class="add-action" data-toggle="modal" data-target="#direct">+</span>
+                    </div>
+                    <div>
+                        <ul id="room-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 right-pane">
+                <div class="chat-header">
+                    <span id="recepient-label"></span>
+                    <span class="dropdown" id="member-span">
+                        <a class="dropdown-toggle" type="button" id="memberDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Memebers</a>
+                        <div id="member-menu" class="dropdown-menu" aria-labelledby="memberDropDown">
+                      </div>
+                      </span>
+                </div>
+                <div class="chat-body">
+                    <ul id="chat-list"></ul>
+                </div>
+                <div class="chat-footer row">
+                    <div class="col-lg-10">
+                        <input type="text" id="msg-box" class="form-control msg-box" placeholder="Enter your message here">
+                    </div>
+                    <div class="col-lg-2"><button class="btn btn-primary" id="send-btn" disabled>send</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
